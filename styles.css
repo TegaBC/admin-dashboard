@@ -38,6 +38,7 @@
     font-weight: 700;
     font-size: 1.2rem;
     margin: 3%;
+    white-space: nowrap;
 }
 .sidebar img{
     width: auto;
@@ -154,7 +155,8 @@
 .sub-one, .sub-two{
     font-size: 1em;
     padding-bottom: 0.5%;
-    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
 }
 
 .announcement-panel{
@@ -175,6 +177,46 @@
     
 }
 
+.project{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 2fr 4fr 1.25fr;
+    grid-template-areas: 
+    "heading"
+    "paragraph"
+    "icons";
+}
+
+#project-title{
+    padding-top: 4%;
+    grid-area: heading;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+#project-description{
+    padding-top: 4%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    grid-area: paragraph;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+#project-icons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    background-color: var(--accent-color);
+    border-radius: 0rem 0rem 1rem 1rem;
+}
+
+#project-icons img{
+    height: 70%;
+}
+
 .announcment{
     width: 60%;
     height: 60%;
@@ -183,7 +225,7 @@
 .project-panel{
     grid-area: project;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
 }
 
@@ -244,13 +286,11 @@
 
 }
 
-.sidebar .header img{
-
-}
 .sidebar h1{
     display: inline;
     font-family: var(--main-font);
     font-weight: 700;
     font-size: 2rem;
-    
+    overflow: hidden;
+    white-space: nowrap;
 }
